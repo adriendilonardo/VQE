@@ -1,0 +1,56 @@
+Recommended Python Version:
+
+3.9.12
+
+Required packages - installed in the python path (using pip or otherwise):
+
+numpy - (1.12.5 - recommended version)
+scipy - (1.7.3 - recommended version)
+sympy - (1.10.1 - recommended version)
+cirq - (1.2.0 - recommended version)
+pennylane - (0.30.0 - recommended version)
+
+--------- Installation intructions ---------
+
+Downloads - Ensure that you have downloaded the following files, either by cloning the github repo or otherwise:
+
+- VQE.py
+- VQE_Example.ipynb (optional - tutorial for getting started)
+- UnitTests.py (optional - contains units tests)
+
+Also ensure that the above required packages have been installed and are accessible in the python path.
+
+Adding to python path - To use the functions inside VQE.py, it must be in the python path. 
+The simple workaround to this is to include the following python code at the top of any script or notebook which will use functions from VQE:
+
+import sys
+sys.path
+sys.path.append('<path to file>VQE.py')
+
+where <path to file> will be replaced with the directory path which contains VQE.py
+
+--------- Using VQE functions ---------------
+
+The main functions of VQE.py include:
+
+- VQE_HT
+- VQT_Sim
+
+The remaining functions are:
+
+- is_pauli_operator
+- pennylane_ham_to_str_ham
+- check_ham_input
+- YZCircuit
+- operator_str_to_hadamard_test
+- operator_str_to_cirq_operator
+- pretty_print_results
+
+Instructions on their usage can be found in their docstrings.
+All of these functions can be imported simultaneously using the following code (executed after adding VQE.py to the python path)
+
+from VQE import *
+
+
+
+
